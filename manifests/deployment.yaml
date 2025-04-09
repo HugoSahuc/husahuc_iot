@@ -4,7 +4,8 @@ metadata:
   name: playground-app
   namespace: dev
 spec:
-  replicas: 2
+  replicas: 1 # Active Pods for the current RS
+  revisionHistoryLimit: 2 # Retain two old ReplicaSets in history
   selector:
     matchLabels:
       app: playground
