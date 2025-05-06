@@ -4,8 +4,8 @@ metadata:
   name: playground-app
   namespace: dev
 spec:
-  replicas: 1 # Active Pods for the current RS
-  revisionHistoryLimit: 2 # Retain two old ReplicaSets in history
+  replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: playground
@@ -18,4 +18,4 @@ spec:
         - name: playground
           image: wil42/playground:v2
           ports:
-            - containerPort: 8080
+            - containerPort: 8888
