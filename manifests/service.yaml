@@ -6,7 +6,9 @@ metadata:
 spec:
   selector:
     app: playground
+  type: NodePort
   ports:
     - protocol: TCP
       port: 8888
       targetPort: 8888
+      nodePort: 31888
